@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toasty_box/toasty_box.dart';
 
 void main() => runApp(MyApp());
 
@@ -18,24 +19,18 @@ class Mypage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Snack Bar'),
-          centerTitle: true,
-        ),
-        body: Builder(
-          builder: (BuildContext ctx) {
-            Center(
-                child: TextButton(
-              child: const Text("Show me"),
-              style: TextButton.styleFrom(
-                backgroundColor: Colors.white, // Background color
-              ),
-              onPressed: () {
-                ScaffoldMessenger.of(ctx)
-                    .showSnackBar(SnackBar(content: Text("HI")));
-              },
-            ));
-          },
-        ));
+      appBar: AppBar(title: Text('Toast Message'), centerTitle: true),
+      body: Center(
+          child: ElevatedButton(
+        onPressed: () {
+          ToastService.showToast(
+            context,
+            message: "This is a message toast 👋😎!",
+          );
+          print("CLIDK");
+        },
+        child: Text("TOAST"),
+      )),
+    );
   }
 }
