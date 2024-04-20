@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/home_screen.dart';
+import 'package:flutter_application_1/cupertino.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const DynamicScreen(),
+      home: const CupertinoWidget(),
     );
   }
 }
