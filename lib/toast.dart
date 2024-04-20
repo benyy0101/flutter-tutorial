@@ -1,25 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:toasty_box/toasty_box.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Practice App',
       theme: ThemeData(primarySwatch: Colors.red),
-      home: Mypage(),
+      home: const Mypage(),
     );
   }
 }
 
 class Mypage extends StatelessWidget {
+  const Mypage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Toast Message'), centerTitle: true),
+      appBar: AppBar(title: const Text('Toast Message'), centerTitle: true),
       body: Center(
           child: ElevatedButton(
         onPressed: () {
@@ -29,7 +33,7 @@ class Mypage extends StatelessWidget {
           );
           print("CLIDK");
         },
-        child: Text("TOAST"),
+        child: const Text("TOAST"),
       )),
     );
   }

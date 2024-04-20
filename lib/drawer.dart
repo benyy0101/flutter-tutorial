@@ -3,34 +3,38 @@ import 'package:flutter/material.dart';
 // void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Practice App',
       theme: ThemeData(primarySwatch: Colors.red),
-      home: Mypage(),
+      home: const Mypage(),
     );
   }
 }
 
 class Mypage extends StatelessWidget {
+  const Mypage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('apple icon menu'),
+        title: const Text('apple icon menu'),
         elevation: 0.0,
         centerTitle: true,
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.shopping_bag),
+            icon: const Icon(Icons.shopping_bag),
             onPressed: () {
               print('shop button is clicked!!');
             },
           ),
           IconButton(
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             onPressed: () {
               print('search button is clicked!!');
             },
@@ -67,33 +71,33 @@ class Mypage extends StatelessWidget {
                 Icons.home,
                 color: Colors.grey[450],
               ),
-              title: Text('Home'),
+              title: const Text('Home'),
               onTap: () {
                 print('Home clicked');
               },
-              trailing: Icon(Icons.add),
+              trailing: const Icon(Icons.add),
             ),
             ListTile(
               leading: Icon(
                 Icons.settings,
                 color: Colors.grey[450],
               ),
-              title: Text('Home'),
+              title: const Text('Home'),
               onTap: () {
                 print('Home clicked');
               },
-              trailing: Icon(Icons.add),
+              trailing: const Icon(Icons.add),
             ),
             ListTile(
               leading: Icon(
                 Icons.question_answer,
                 color: Colors.grey[450],
               ),
-              title: Text('Home'),
+              title: const Text('Home'),
               onTap: () {
                 print('Home clicked');
               },
-              trailing: Icon(Icons.add),
+              trailing: const Icon(Icons.add),
             ),
           ],
         ),
