@@ -11,7 +11,21 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const CupertinoWidget(),
+      theme: ThemeData(
+          fontFamily: 'sunflower',
+          textTheme: const TextTheme(
+              displayLarge: TextStyle(
+                  color: Colors.white,
+                  fontSize: 80.0,
+                  fontWeight: FontWeight.w700,
+                  fontFamily: 'parsienne'),
+              displayMedium: TextStyle(
+                  color: Colors.white,
+                  fontSize: 50.0,
+                  fontWeight: FontWeight.w700),
+              bodyLarge: TextStyle(color: Colors.white, fontSize: 30.0),
+              bodyMedium: TextStyle(color: Colors.white, fontSize: 20.0))),
+      home: const D_CupertinoWidget(),
     );
   }
 }
